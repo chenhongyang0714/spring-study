@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.study.pojo.Address">
+        <property name="address" value="china"></property>
+    </bean>
+
+    <bean id="student" class="com.study.pojo.Student">
+        <!-- 1. 普通值注入  value -->
+        <property name="name" value="chy"></property>
+
+        <!-- 2. Bean注入  ref -->
+        <property name="address" ref="address"></property>
+
+        <!-- 3. 数组注入  array -->
+        <property name="books">
+            <array>
+                <value>西游记</value>
+                <value>红楼梦</value>
+                <value>三国演义</value>
+                <value>水浒传</value>
+            </array>
+        </property>
+
+        <!-- 4. List注入  list -->
+        <property name="hobbys">
+            <list>
+                <value>看书</value>
+                <value>听歌</value>
+                <value>跑步</value>
+            </list>
+        </property>
+
+        <!-- 5. Map注入  map -->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="12"></entry>
+                <entry key="银行卡" value="1233"></entry>
+            </map>
+        </property>
+
+        <!-- 6. Set注入  set -->
+        <property name="games">
+            <set>
+                <value>英雄联盟</value>
+            </set>
+        </property>
+
+        <!-- 7. null注入  -->
+        <property name="wife">
+            <null/>
+        </property>
+
+        <!-- 8. 属性集 注入  props -->
+        <property name="info">
+            <props>
+                <prop key="username">propose</prop>
+                <prop key="password">0000</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
