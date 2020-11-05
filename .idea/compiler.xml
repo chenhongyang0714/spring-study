@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="first" />
         <module name="02-di" />
+        <module name="first" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />
