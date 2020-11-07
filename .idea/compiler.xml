@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="02-di" />
         <module name="first" />
+        <module name="03-Autowired" />
+        <module name="02-di" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />
