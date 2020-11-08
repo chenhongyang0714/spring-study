@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
 
-<!--    <bean id="cat" class="com.study.pojo.Cat"></bean>-->
-<!--    <bean id="dog" class="com.study.pojo.Dog"></bean>-->
+    <bean id="cat" class="com.study.pojo.Cat"></bean>
+    <bean id="dog" class="com.study.pojo.Dog"></bean>
 
     <!--    普通方式-->
-    <!--    <bean id="people" class="com.study.pojo.People">-->
-    <!--        <property name="name" value="propose"></property>-->
-    <!--        <property name="cat" ref="cat"></property>-->
-    <!--        <property name="dog" ref="dog"></property>-->
-    <!--    </bean>-->
+    <!--        <bean id="people" class="com.study.pojo.People">-->
+    <!--            <property name="name" value="propose"></property>-->
+    <!--            <property name="cat" ref="cat"></property>-->
+    <!--            <property name="dog" ref="dog"></property>-->
+    <!--        </bean>-->
 
     <!--    byName
     会自动在容器上下文查找，和自己对象 对应属性的set方法的(方法名-set)后面字符匹配的 bean id
@@ -25,10 +28,14 @@
     要求：每个 bean 的 对象类型必须不同
     -->
 
-<!--    <bean class="com.study.pojo.Cat"></bean>-->
-<!--    <bean class="com.study.pojo.Dog"></bean>-->
-<!--    <bean id="people" class="com.study.pojo.People" autowire="byType"></bean>-->
+    <!--    <bean class="com.study.pojo.Cat"></bean>-->
+    <!--    <bean class="com.study.pojo.Dog"></bean>-->
+    <!--    <bean id="people" class="com.study.pojo.People" autowire="byType"></bean>-->
 
 
+    <!--    通过注解实现自动装配-->
+    <context:annotation-config/>
+
+    <bean id="people" class="com.study.pojo.People"></bean>
 
 </beans>

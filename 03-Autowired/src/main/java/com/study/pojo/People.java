@@ -1,7 +1,15 @@
 package com.study.pojo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.lang.Nullable;
+
 public class People {
+    @Autowired
     private Dog dog;
+
+    @Autowired
+//    @Qualifier(value = "cat")
     private Cat cat;
     private String name;
 
@@ -9,6 +17,7 @@ public class People {
         return dog;
     }
 
+//    @Autowired
     public void setDog(Dog dog) {
         this.dog = dog;
     }
@@ -17,6 +26,7 @@ public class People {
         return cat;
     }
 
+//    @Autowired
     public void setCat(Cat cat) {
         this.cat = cat;
     }

@@ -2,3 +2,5 @@
 - byName
 - byType
 - 注解
+    - Autowired
+    - Resource
